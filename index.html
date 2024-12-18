@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Faulty Calculator</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap');
+
+        body {
+            font-family: 'Roboto', sans-serif;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #000000;
+            margin: 0;
+            transition: background-color 0.5s ease;
+        }
+        .calculator {
+            background-color: #292929;
+            padding: 30px;
+            border-radius: 12px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            max-width: 400px;
+            width: 100%;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        .calculator:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+        }
+        .calculator h1 {
+            margin-bottom: 20px;
+            font-size: 24px;
+            color: #ffeb3b;
+            transition: color 0.3s ease;
+        }
+        .calculator input, .calculator select, .calculator button {
+            margin: 10px 0;
+            padding: 15px;
+            width: calc(100% - 30px);
+            box-sizing: border-box;
+            border: 1px solid #ffeb3b;
+            border-radius: 8px;
+            font-size: 16px;
+            transition: border-color 0.3s ease, box-shadow 0.3s ease;
+        }
+        .calculator input:focus, .calculator select:focus, .calculator button:focus {
+            border-color: #ffeb3b;
+            box-shadow: 0 0 8px rgba(255, 235, 59, 0.3);
+            outline: none;
+        }
+        .calculator button {
+            background-color: #ffeb3b;
+            color: #000000;
+            border: none;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+        .calculator button:hover {
+            background-color: #fbc02d;
+        }
+        .calculator p {
+            margin-top: 20px;
+            font-size: 18px;
+            color: #ffeb3b;
+            transition: color 0.3s ease;
+        }
+        footer {
+            margin-top: 20px;
+            font-size: 14px;
+            color: #ffeb3b;
+        }
+        footer a {
+            color: #ffeb3b;
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+        footer a:hover {
+            color: #fbc02d;
+        }
+    </style>
+</head>
+<body>
+    <div class="calculator">
+        <h1>Faulty Calculator</h1>
+        <input type="number" id="num1" placeholder="Enter the first number">
+        <input type="number" id="num2" placeholder="Enter the second number">
+        <select id="operation">
+            <option value="+">+</option>
+            <option value="*">*</option>
+            <option value="-">-</option>
+            <option value="/">/</option>
+        </select>
+        <button onclick="performCalculation()">Calculate</button>
+        <p id="result"></p>
+    </div>
+    <footer>
+        Created by <a href="https://github.com/MohammedNadeemR" target="_blank">MohammedNadeemR</a>
+    </footer>
+    <script src="index.js"></script>
+</body>
+</html>
